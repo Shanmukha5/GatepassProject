@@ -35,3 +35,22 @@ Route::get('/admin/userDetail', 'adminsController@userDetail');
 Route::get('/admin/forms', 'adminsController@forms');
 Route::get('/admin/notifications', 'adminsController@notifications');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/forms','HomeController@forms')->name('forms');
+
+Route::get('/tables','HomeController@tables')->name('tables');
+
+Route::get('/notifications','HomeController@notifications')->name('notifications');
+
+Route::get('/crud','HomeController@crud')->name('crud');
+
+Route::get('/log','HomeController@log')->name('log');
+
+Route::get('/userDetail','HomeController@userDetail')->name('userDetail');
+
+Route::get('/registerNewUser','HomeController@registerNewUser');
+
